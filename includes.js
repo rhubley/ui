@@ -138,7 +138,7 @@ var MiniProfiler = (function () {
                 idx = fetchingIds.push(id) - 1;
 
                 $.ajax({
-                    url: options.path + 'results',
+                    url: options.path + 'results.aspx',
                     data: { id: id, clientPerformance: clientPerformance, clientProbes: clientProbes, popup: 1 },
                     dataType: 'json',
                     type: 'POST',
@@ -1044,7 +1044,7 @@ var MiniProfiler = (function () {
 
                 var updateGrid = function (id) {
                     $.ajax({
-                        url: options.path + 'results-list',
+                        url: options.path + 'results-list.aspx',
                         data: { "last-id": id },
                         dataType: 'json',
                         type: 'GET',
